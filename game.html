@@ -50,9 +50,10 @@
                             <h1>damage : {{monter_atk}}</h1>
                         </div>
                     </div>
-                    <h1 v-if="this.hphero <= 0  &&  this.hpmonter >= 0"  v-bind="sethphero_0()">You Louse 😢</h1>
+                    <h1 v-if ="this.hpmonter <= 0 && this.hphero <= 0" v-bind="sethp_0()" >Draw</h1>
+                    <h1 v-else-if="this.hphero <= 0  &&  this.hpmonter >= 0"  v-bind="sethphero_0()">You Louse 😢</h1>
                     <h1 v-else-if ="this.hpmonter <= 0 && this.hphero >= 0" v-bind="sethpmonter_0()">You Win </h1>
-                    <h1 v-else-if ="this.hpmonter <= 0 && this.hphero <= 0" v-bind="sethp_0()" >Draw</h1>
+                    
                 </div>
                 
             </div>
@@ -68,16 +69,7 @@
         </div>
         <embed   src="/sound/8 Bit Hero by 8bitmusician.mp3"" loop="true" autostart="true" width="2"
          height="0" VOLUME=0>
-         <footer class="bg-light text-center text-lg-start fixed-bottom">
-        
-            <div class="text-center p-5" style="background-color: rgba(0, 0, 0, 0.2);">
-              <div class="fs-2">
-                Create by krit 6304101307
-              </div>
-              
-            </div>
-            
-          </footer>
+         
 </body>
 <script src="/js/game.js"></script>
 
